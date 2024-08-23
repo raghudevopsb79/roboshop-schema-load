@@ -14,7 +14,7 @@ if [ "${DB_TYPE}" == "mongo" ]; then
 
 fi
 
-if [ "${DB_TYPE}" == "mongo" ]; then
+if [ "${DB_TYPE}" == "mysql" ]; then
   for file in $SCHEMA_FILE ; do
     mysql -h $DB_HOST -u${DB_USER} -p${DB_PASS} < /app/db/$file.sql
   done
